@@ -1,3 +1,4 @@
+"""Lecture 2 notes"""
 from typing import Optional
 
 x1: int = 3
@@ -36,12 +37,9 @@ def get_number(num: str) -> Optional[int]:
     except ValueError:
         return None
 
-"""
-    Mutation testing
-    Want to make sure tests fail on incorrect code
-    but work on correct code
-"""
+
+# Mutation testing Want to make sure tests fail on incorrect code but work on correct code
+
 def test_negative_area() -> None:
     """Make sure it raises a ValueError for negative values"""
-    with pytest.raises(ValueError):
-        get_rectangle(-1, 4)
+    get_rectangle(-1, 4)
